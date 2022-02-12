@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+import { Col, Container, Row } from "react-bootstrap"
+import { AiFillCheckCircle } from "react-icons/ai"
+import SideImage from "./components/sideImage/sideImage"
+import LoginForm from "./components/loginForm/loginForm"
+import ThemeToggle from "./components/theme-toggle/theme-toggle"
+import AuthButtons from "./components/authButtons/authButtons"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Container fluid className='App'>
+      <Row>
+        <Col sm={8}>
+          <SideImage />
+        </Col>
+        <Col sm={4}>
+          <div className='logo-container'>
+            <h1 className='logo'>
+              Travelguru <AiFillCheckCircle />
+            </h1>
+            <ThemeToggle />
+          </div>
+          <hr />
+          <h2>Sign In to Travelguru</h2>
+          <p>
+            Don't have an account? <a href='/'>Sign up</a>
+          </p>
+          <hr />
+          <LoginForm />
+          <hr />
+          <div className='option'> - OR - </div>
+          <AuthButtons />
+        </Col>
+      </Row>
+    </Container>
+  )
 }
 
-export default App;
+export default App
