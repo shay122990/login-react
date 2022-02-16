@@ -1,56 +1,10 @@
 .App {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background-color: gray;
-  margin: 100px auto 10px;
-  padding: 0;
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  top: 10%;
+  left: 10%;
   width: 80%;
-  height: auto;
-  border-radius: 15px;
-}
-hr {
-  color: rgb(93, 93, 93);
-  margin: 20px 0;
-}
-.row {
-  width: 100%;
-  display: inline-flex;
-  margin: auto;
-  border-radius: 15px;
-}
-
-.col-sm-8 {
   height: 700px;
-  padding: 0;
-}
-.col-sm-4 {
-  background-color: rgb(255, 242, 242);
-  height: 700px;
-  padding: 50px;
-  border-radius: 0 15px 15px 0;
-}
-.logo-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.logo {
-  font-size: 12px;
-  color: salmon;
-  padding-top: 15px;
-}
-h2 {
-  font-size: 20px;
-}
-a {
-  text-decoration: none;
-  color: salmon;
-  font-weight: bold;
-}
-.option {
-  text-align: center;
-  font-size: 15px;
-  color: rgb(88, 87, 87);
-  padding: 10px;
+  box-sizing: border-box;
 }

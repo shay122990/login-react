@@ -5,10 +5,49 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(204, 224, 251);
+  background-color: var(--light-background);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+/*                    theme colors                      */
+
+:root {
+  --light-background: #e9eefc;
+  --light-form-background: linear-gradient(
+    86deg,
+    rgba(222, 238, 244, 1) 0%,
+    rgba(253, 253, 255, 1) 37%,
+    rgba(253, 253, 255, 1) 38%,
+    rgba(253, 253, 255, 1) 58%,
+    rgba(249, 228, 251, 1) 100%
+  );
+  --light-font: #23175c;
+  --logo: #ea4c5e;
+  --light-buttons: #fae3e1;
+  --button-background: linear-gradient(
+    90deg,
+    rgba(253, 29, 29, 1) 9%,
+    rgba(252, 176, 69, 1) 92%
+  );
+  /* dark */
+  --dark-background: #493e65;
+  --dark-font: #ebedef;
+  --dark-form-background: linear-gradient(
+    35deg,
+    rgba(86, 42, 91, 1) 0%,
+    rgba(41, 28, 96, 1) 28%,
+    rgba(41, 28, 96, 1) 70%,
+    rgba(86, 42, 91, 1) 100%
+  );
+  --dark-buttons: #fdfdff;
+}
+/* #f9e4fb */
+/* #fdfdff */
+/* #deeef4 */
+/* #ea4c5e */
+/* #ec6b57 */
+/* #291c60 */
+/* #562a5b */

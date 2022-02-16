@@ -7,10 +7,15 @@
   padding: 0;
   text-align: center;
 }
+.btn:hover {
+  background-color: antiquewhite;
+  background-image: var(--button-background);
+}
 .google {
   border-radius: 8px;
   height: 50px;
-  background-color: rgb(254, 203, 197);
+  background-color: var(--light-buttons);
+
   border: none;
   width: 180px;
 }
@@ -19,15 +24,15 @@
   padding: 0 2px;
 }
 span {
-  font-size: 10px;
-  font-weight: bold;
+  font-size: 12px;
+  padding-left: 3px;
   color: black;
 }
 .facebook {
   height: 50px;
   width: 50px;
   border-radius: 8px;
-  background-color: rgb(254, 203, 197);
+  background-color: var(--light-buttons);
   border: none;
 }
 .facebook-icon {
@@ -39,9 +44,40 @@ span {
   width: 50px;
   border-radius: 8px;
   border: none;
-  background-color: rgb(254, 203, 197);
+  background-color: var(--light-buttons);
 }
 .apple-icon {
   font-size: 20px;
   color: black;
+}
+
+/* Media query  */
+@media (max-width: 1425px) {
+  .button-container {
+    margin-top: 20px;
+    justify-content: space-evenly;
+  }
+  .google {
+    width: 50px;
+  }
+  span {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .button-container {
+    justify-content: space-evenly;
+  }
+  .google {
+    width: 80px;
+  }
+  .facebook {
+    width: 80px;
+  }
+  .apple {
+    width: 80px;
+  }
+  .icon {
+    font-size: 30px;
+  }
 }

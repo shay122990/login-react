@@ -8,17 +8,17 @@ import { Button } from "react-bootstrap"
 const AuthButtons = () => {
   return (
     <div className='button-container'>
-      <Button className='google'>
-        <FcGoogle className='google-icon' />
+      <Button className='google btn'>
+        <FcGoogle className='google-icon icon' />
         <span>Sign in with Google</span>
       </Button>
 
-      <Button className='facebook'>
-        <AiFillFacebook className='facebook-icon' />
+      <Button className='facebook btn'>
+        <AiFillFacebook className='facebook-icon icon' />
       </Button>
 
-      <Button className='apple'>
-        <FaApple className='apple-icon' />
+      <Button className='apple btn'>
+        <FaApple className='apple-icon icon' />
       </Button>
     </div>
   )
