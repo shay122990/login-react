@@ -6,6 +6,7 @@ import SideImage from "../../components/sideImage/sideImage"
 import LoginForm from "../../components/loginForm/loginForm"
 import ThemeToggle from "../../components/theme-toggle/theme-toggle"
 import AuthButtons from "../../components/authButtons/authButtons"
+import { Link } from "react-router-dom"
 
 const SignIn = () => {
   return (
@@ -24,7 +25,7 @@ const SignIn = () => {
           <hr />
           <h2>Sign In to Travelguru</h2>
           <p>
-            Don't have an account? <a href='/'>Sign up</a>
+            Don't have an account? <Link to='/signup'>Sign up</Link>
           </p>
           <hr />
           <LoginForm />

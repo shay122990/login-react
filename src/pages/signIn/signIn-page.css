@@ -21,7 +21,7 @@ hr {
   padding: 0;
 }
 .col-sm-4 {
-  background-color: rgb(255, 242, 242);
+  background-image: var(--light-form-background);
   height: 700px;
   padding: 50px;
   border-radius: 0 15px 15px 0;
