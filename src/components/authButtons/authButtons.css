@@ -8,8 +8,8 @@
   text-align: center;
 }
 .btn:hover {
-  background-color: antiquewhite;
-  background-image: var(--button-background);
+  transform: scale(1.1, 1.1);
+  background-color: aliceblue;
 }
 .google {
   border-radius: 8px;

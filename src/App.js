@@ -7,6 +7,7 @@ function App() {
   return (
     <div className='App'>
       <Routes>
+        {/* When you start the project, direct the URL to /signin */}
         <Route path='/signin' element={<SignIn />} />
       </Routes>
     </div>
