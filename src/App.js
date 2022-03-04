@@ -1,14 +1,17 @@
 import React from "react"
-import "./App.css"
+import "./index.css"
 import { Routes, Route } from "react-router-dom"
-import SignIn from "./pages/signIn/signIn-page"
+import SignIn from "./pages/SignIn"
+import HomePage from "./pages/Home"
+import SignUp from "./pages/SignUp"
 
-function App() {
+const App = () => {
   return (
-    <div className='App'>
+    <div className='app'>
       <Routes>
-        {/* When you start the project, direct the URL to /signin */}
         <Route path='/signin' element={<SignIn />} />
+        <Route path='/signup' element={<SignUp />} />
+        <Route path='/home' element={<HomePage />} />
       </Routes>
     </div>
   )

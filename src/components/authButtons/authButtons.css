@@ -3,19 +3,20 @@
   flex-direction: row;
   justify-content: space-between;
   height: 40px;
-  margin-top: 10px;
+  margin-top: 20px;
   padding: 0;
   text-align: center;
 }
 .btn:hover {
-  transform: scale(1.1, 1.1);
-  background-color: aliceblue;
+  transform: scale(1, 1);
+  background-color: #d4766d;
+  border: none;
 }
+
 .google {
   border-radius: 8px;
   height: 50px;
   background-color: var(--light-buttons);
-
   border: none;
   width: 180px;
 }
@@ -26,7 +27,7 @@
 span {
   font-size: 12px;
   padding-left: 3px;
-  color: black;
+  color: var(--light-mode-font);
 }
 .facebook {
   height: 50px;
@@ -36,8 +37,8 @@ span {
   border: none;
 }
 .facebook-icon {
-  font-size: 20px;
-  color: blue;
+  font-size: 25px;
+  color: #3b5998;
 }
 .apple {
   height: 50px;
@@ -47,35 +48,35 @@ span {
   background-color: var(--light-buttons);
 }
 .apple-icon {
-  font-size: 20px;
+  font-size: 25px;
   color: black;
 }
-
 /* Media query  */
-@media (max-width: 1425px) {
+@media (max-width: 1448px) {
   .button-container {
-    margin-top: 20px;
-    justify-content: space-evenly;
-  }
-  .google {
-    width: 50px;
+    justify-content: space-between;
+    margin-top: 40px;
   }
   span {
     display: none;
+  }
+  .google {
+    width: 50px;
   }
 }
 @media (max-width: 800px) {
   .button-container {
     justify-content: space-evenly;
+    margin-top: 20px;
   }
   .google {
-    width: 80px;
+    width: 70px;
   }
   .facebook {
-    width: 80px;
+    width: 70px;
   }
   .apple {
-    width: 80px;
+    width: 70px;
   }
   .icon {
     font-size: 30px;

@@ -5,9 +5,10 @@
   margin: 0;
   padding: 0;
 }
+
 hr {
-  color: var(--light-font);
-  margin: 20px 0;
+  color: var(--light-mode-font);
+  margin: 25px 0;
 }
 .row {
   width: 100%;
@@ -23,7 +24,7 @@ hr {
 .col-sm-4 {
   background-image: var(--light-form-background);
   height: 700px;
-  padding: 50px;
+  padding: 30px 50px;
   border-radius: 0 15px 15px 0;
 }
 .logo-container {
@@ -34,14 +35,17 @@ hr {
 .logo {
   font-size: 12px;
   color: var(--logo);
-  padding-top: 15px;
+  margin-bottom: 0;
+  padding-top: 2px;
 }
+
 h2 {
-  font-size: 20px;
-  color: var(--light-font);
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--light-mode-font);
 }
 p {
-  color: var(--light-font);
+  color: var(--light-mode-font);
 }
 a {
   text-decoration: none;
@@ -50,21 +54,32 @@ a {
 }
 a:hover {
   text-decoration: none;
-  color: var(--light-font);
+  color: var(--light-mode-font);
 }
 .option {
   text-align: center;
   font-size: 15px;
-  color: var(--dark-background);
+  color: var(--light-mode-font);
   padding: 10px;
 }
 
-@media (max-width: 1065px) {
+@media (max-width: 1447px) {
   .option {
     padding: 0;
   }
   .col-sm-4 {
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 1221px) {
+  .col-sm-4 {
     padding: 30px 15px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 10px;
   }
 }
 @media (max-width: 800px) {
@@ -78,5 +93,11 @@ a:hover {
   }
   hr {
     margin: 30px 0;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  p {
+    font-size: 15px;
   }
 }

@@ -1,7 +1,10 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Form, Button } from "react-bootstrap"
 import "./loginForm.css"
 import { BiHide } from "react-icons/bi"
+import { useDispatch, useSelector } from "react-redux"
+import { useNavigate } from "react-router-dom"
+import { loginInitiate } from "../../redux/actions"
 
 const LoginForm = () => {
   const [name, setName] = useState("")
@@ -9,9 +12,24 @@ const LoginForm = () => {
   const [password, setPassword] = useState("")
   const [showPassword, setShowPassword] = useState(false)
 
-  const submitHandler = (e) => {
+  const { currentUser } = useSelector((state) => state.user)
+
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (currentUser) {
+      navigate("/home")
+    }
+  }, [currentUser, navigate])
+
+  const dispatch = useDispatch()
+
+  const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(e)
+    if (!email || !password) {
+      return
+    }
+    dispatch(loginInitiate(email, password))
   }
 
   // Password toggle handler
@@ -20,10 +38,12 @@ const LoginForm = () => {
   }
 
   return (
-    <div className='login-container'>
-      <Form className='login-form' onSubmit={submitHandler}>
+    <div>
+      {/* {error && <Alert variant='danger'> {error} </Alert>} */}
+      <Form onSubmit={handleSubmit}>
         <Form.Group className='input-group' controlId='formBasicName'>
           <Form.Control
+            required
             className='input'
             type='name'
             placeholder='Name'
@@ -33,6 +53,7 @@ const LoginForm = () => {
         </Form.Group>
         <Form.Group className='input-group' controlId='formBasicEmail'>
           <Form.Control
+            required
             className='input'
             type='email'
             placeholder='Email'
@@ -42,6 +63,8 @@ const LoginForm = () => {
         </Form.Group>
         <Form.Group className='input-group' controlId='formBasicPassword'>
           <Form.Control
+            required
+            minLength={8}
             className='input'
             type={showPassword ? "text" : "password"}
             placeholder='Password'

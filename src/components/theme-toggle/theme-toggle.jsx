@@ -1,9 +1,12 @@
 import React from "react"
-import "./theme-toggle.css"
-import { FiToggleLeft } from "react-icons/fi"
+import { Form } from "react-bootstrap"
 
 const ThemeToggle = () => {
-  return <FiToggleLeft className='toggle-left' />
+  return (
+    <>
+      <Form.Check className='switch' type='switch' id='custom-switch' />
+    </>
+  )
 }
 
 export default ThemeToggle
